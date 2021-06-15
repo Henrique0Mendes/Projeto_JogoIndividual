@@ -1,22 +1,36 @@
+.tipoletra{
+    color: white;
+    font-size: 18px;
+    font-family: 'Montaga', serif;
+}
+
 .centrar-top{
-    margin-top: 75vh;
+    margin-top: 78vh;
  }
  
- button{
+ .botao{
      border-radius: 100%;
-     width: 250px;
-     height: 27px;
+     width: 230px;
+     height: 32px;
+     background-color: black;
+     border: none;
+     box-shadow: inset 0 0 1em black, 0 0 1em black;
  }
  
- button:first-child{
-     margin-left: 49vw;
+ .botao:first-child{
+     margin-left: 43.5vw;
+     margin-bottom: 1.5vh;
  }
  
- button:last-child{
-     margin-left: 47vw;
+ .botao:last-child{
+     margin-left: 43.5vw;
+ }
+
+ .botao:hover{
+    box-shadow: inset 0 0 1em rgb(128, 112, 23), 0 0 1em rgb(128, 112, 23);
  }
  
  a{
      text-decoration: none;
-     color: white;
- }
+    }
+
