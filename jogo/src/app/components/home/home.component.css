@@ -1,0 +1,22 @@
+.centrar-top{
+    margin-top: 75vh;
+ }
+ 
+ button{
+     border-radius: 100%;
+     width: 250px;
+     height: 27px;
+ }
+ 
+ button:first-child{
+     margin-left: 49vw;
+ }
+ 
+ button:last-child{
+     margin-left: 47vw;
+ }
+ 
+ a{
+     text-decoration: none;
+     color: white;
+ }
