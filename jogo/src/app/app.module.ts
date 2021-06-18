@@ -7,12 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 import { CriarComponent } from './components/criar/criar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CriarComponent,
+    GameComponent,
 
   ],
   imports: [

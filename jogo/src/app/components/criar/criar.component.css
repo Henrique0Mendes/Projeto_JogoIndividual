@@ -1,0 +1,21 @@
+.caixa{
+    background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
+    margin-top: 26vh;
+    margin-left: 20vw;
+    width: 60vw;
+    height: 51vh;
+    border:solid 2.4px #6f7072;
+ }
+
+ .hunter{
+    width: 15vw;
+    height: 45vh;    
+    margin-top: 30px; 
+    margin-left: 30px;
+}
+
+.caixaHunter{
+    background: radial-gradient(at 50%,#120e0f,#161616,#202020, #393a3c);
+    border: solid 4px #342f2c;
+    margin-top: 1vh;
+}

@@ -1,30 +1,29 @@
-
-<div class="centrar-top">
-
-  <button class="botao tipoletra" (click)="open(content)">Login</button>
-  <button class="botao"><a  [routerLink]="['/CriarPersonagem']" class="tipoletra"> Criar Personagem</a></button>
-</div>
-
-<ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header colorModal ">
-    <h4 class="modal-title letraLogin" id="modal-basic-title">Login</h4>
-    <button type="button" class="close botaoModal" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div class="centrar-top">
+    <button class="botao tipoletra" (click)="open(content)">Login</button>
+    <button class="botao"><a  [routerLink]="['/CriarPersonagem']" class="tipoletra"> Criar Personagem</a></button>
   </div>
-  <div class="modal-body colorModal">
-    <form class="colorModal">
-      <div class="form-group">
-        <label class="letraInput">Nome utilizador</label>
-        <input type="email" class="form-control" #nome>
-      </div><br>
-      <div class="form-group">
-        <label class="letraInput">Palavra-Passe</label>
-        <input type="password" class="form-control" #pass>
-      </div>
-      <br>
-      <button type="submit" class="btn btn-primary letraInput botaoModal" (click)="login(nome.value, pass.value)">Entrar</button>
-    </form>
-  </div>
-</ng-template> 
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header colorModal bordaModal ">
+      <h4 class="modal-title letraLogin" id="modal-basic-title">Login</h4>
+      <button type="button" class="close botaoModal" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body colorModal bordaModal">
+      <form class="colorModal">
+        <div class="form-group">
+          <label class="letraInput">Nome utilizador</label>
+          <input type="email" class="form-control" #nome>
+        </div><br>
+        <div class="form-group">
+          <label class="letraInput">Palavra-Passe</label>
+          <input type="password" class="form-control" #pass>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary letraInput botaoModal" (click)="login(nome.value, pass.value, content)">Entrar</button>
+      </form>
+    </div>
+  </ng-template> 
+
 
