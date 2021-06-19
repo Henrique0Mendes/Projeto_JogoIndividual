@@ -15,7 +15,10 @@
 }
 
 .caixaHunter{
-    background: radial-gradient(at 50%,#120e0f,#161616,#202020, #393a3c);
+    background-image: url('../../../assets/imagens/fundo_personagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     border: solid 4px #342f2c;
     margin-top: 1vh;
+
 }

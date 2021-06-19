@@ -1,10 +1,20 @@
 
+p{
+    display: none;
+    color: #a43f41;
+    font-size: 16px;
+    font-family: 'Montaga', serif;
+}
+
 .colorModal{
-    background-image: linear-gradient(to right, #1e272e,#1a2125,#1a1d24,#222329, #1b1b22, #121018, #1a1519);
+    /* background-image: linear-gradient(to right, #1e272e,#1a2125,#1a1d24,#222329, #1b1b22, #121018, #1a1519); */
+    background-image: url('../../../assets/imagens/fundo_modal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bordaModal{
-    border:solid 2.4px #6f7072;
+    border:solid 2.4px white;
 }
 
 .tipoletra{
@@ -25,12 +35,23 @@
     font-family: 'Montaga', serif;
 }
 
+.botaoFechar{
+    background: transparent;
+    border:none;
+    color: white;
+    font-size: 28px;
+}
+
 .botaoModal{
     background-color: black;
     color: white;
     border: black;
-    border-radius: 5px;
+    border-radius: 100% ;
+    width: 170px;
+    margin-top: 3vh;
+    margin-left: 7.5vw;
 }
+
 .botaoModal:hover{
     box-shadow: inset 0 0 1em rgb(128, 112, 23), 0 0 1em rgb(128, 112, 23);
 }

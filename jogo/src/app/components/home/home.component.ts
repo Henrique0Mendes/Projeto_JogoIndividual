@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalConfig, NgbModal , NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import { LoginService } from 'src/app/services/servico.service';
+import { ServicosService } from 'src/app/services/servicos.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { LoginService } from 'src/app/services/servico.service';
 
 export class HomeComponent implements OnInit {
 
-  constructor(private loginService: LoginService, router:Router,config: NgbModalConfig, private modalService: NgbModal ) {
+  constructor(private service: ServicosService, router:Router,config: NgbModalConfig, private modalService: NgbModal ) {
     this.router = router;
     config.backdrop = 'static';
     config.keyboard = false;
@@ -23,26 +23,47 @@ export class HomeComponent implements OnInit {
     this.modalService.open(content);
   }
 
-  ngOnInit(): void {
+  openModalCriar(content1) {
+    this.modalService.open(content1);
+  }
 
+  ngOnInit(): void {
   }
   
   router: Router;
 
-  login(user:any , pass:any, content) {
-  this.loginService.login(user, pass).subscribe(
+  login(user:any , pass:any, content, erro) {
+  this.service.login(user, pass).subscribe(
       (x) => {console.log(x['data']);}
       );
-      this.loginService.login(user, pass).subscribe((x) => {
+      this.service.login(user, pass).subscribe((x) => {
         if (x['code'] == 200 ){
           this.router.navigate(['/Jogo'])
           console.log(x);
           this.modalService.dismissAll(content);
         } else{
-          alert("Login Invalido")
+          erro.style.display="block";
         }
-
       }
       );
   }
+
+  criarUtilizador(user:any , pass:any, content1, erroCriar) {
+    this.service.criarUtilizador(user, pass).subscribe(
+        (x) => {console.log(x['data']);}
+        );
+        this.service.criarUtilizador(user, pass).subscribe((x) => {
+          if (x['code'] == 200 ){
+            this.router.navigate(['/Jogo'])
+            console.log(x);
+            this.modalService.dismissAll(content1);
+          }else{
+            erroCriar.style.display="block";
+          }
+        }
+        );
+    }
+
+
+
 }
