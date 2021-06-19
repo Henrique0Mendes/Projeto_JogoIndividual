@@ -4,17 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { CriarComponent } from './components/criar/criar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { GameComponent } from './components/game/game.component';
+import { QuatroZeroQuatroComponent } from './components/quatro-zero-quatro/quatro-zero-quatro.component';
+import { PersonagensComponent } from './components/personagens/personagens.component';
+import { CriarpersonagensComponent } from './components/personagens/criarpersonagens/criarpersonagens.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CriarComponent,
     GameComponent,
+    QuatroZeroQuatroComponent,
+    PersonagensComponent,
+    CriarpersonagensComponent
 
   ],
   imports: [
