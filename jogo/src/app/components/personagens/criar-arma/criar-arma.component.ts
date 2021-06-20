@@ -17,6 +17,8 @@ export class CriarArmaComponent implements OnInit {
   }
 
   foto:string="../../../assets/imagens/machado.png";
+  username = localStorage.key(0);
+  password = localStorage.getItem(this.username);
    
   mudaArma(tipo){
       if (tipo.value == 0){
@@ -32,24 +34,20 @@ export class CriarArmaComponent implements OnInit {
 
   router: Router;
 
-  /* criarArma(nome:any, ataque:any,durabilidade:any, tipo:any, vida:any){
-   let username = localStorage.key(0);
-   let password = localStorage.getItem(username);
-
-    this.service.criarPersonagem(nome, ataque, tipo, durabilidade, vida, username, password).subscribe(
-      (x) => {console.log(x['data']);}
-      );
-      this.service.criarPersonagem(nome, ataque, tipo, durabilidade, vida,username, password).subscribe((x) => {
-        if (x['code'] == 200 ){
-          this.router.navigate(['/Personagens']);
-          console.log(x);
-        }else{
-          alert("erro");
+  
+  criarArma(nome, tipo, ataque, vida, durabilidade,erroArma){
+    this.service.criarArma(nome, ataque, tipo, durabilidade, vida, this.username, this.password).subscribe((x) => {
+          if (x['code'] == 200 ){
+            this.router.navigate(['/Personagens']);
+            console.log(x);
+          }else{
+            erroArma.style.display="block";
+          }
         }
-      }
-      );
-  } 
+        );
+    } 
 
- */
+   
+ 
 
 }

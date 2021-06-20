@@ -2,3 +2,14 @@
 body{
     background-image: url('assets/imagens/fundoprincipal.jpeg');
 }
+
+.voltar{
+    margin-top: 2px;
+    margin-left: 2px;
+    width: 30px;
+    height: 30px;
+ }
+
+ .margin-left{
+    margin-left: 40px;
+}

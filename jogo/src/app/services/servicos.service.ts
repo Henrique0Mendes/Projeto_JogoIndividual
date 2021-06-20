@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AttrAst } from '@angular/compiler';
+import { Personagem } from '../classes/personagem';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,18 @@ export class ServicosService {
     return this.http.get(this.linkReceberPersonagem + id);
   }
 
+  criarArma(nome, ataque, tipo, durabilidade, vida, username, password){
+    let data:FormData = new FormData();
+    data.append("name", nome);
+    data.append("atk", ataque);
+    data.append("durabilidade", durabilidade);
+    data.append("tipoDeArma", tipo);
+
+    data.append("vida", vida);
+    data.append("username", username);
+    data.append("password", password); 
+    return this.http.post(this.LinkCriarPersonagem, data);
+  }
 
 
 }

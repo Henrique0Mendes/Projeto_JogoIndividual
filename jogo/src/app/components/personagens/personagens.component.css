@@ -28,18 +28,18 @@ a{
 
 .caixa{
     background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
-    margin-top: 26vh;
-    margin-left: 20vw;
-    width: 60vw;
-    height: 60vh;
+    margin-top: 17vh;
+    margin-left: 15vw;
+    width: 77vw;
+    height: 74vh;
     border:solid 2.4px #6f7072;
  }
 
  .tipoPersonagem{
-    width: 17vw;
-    height: 55vh;    
+    width: 27vw;
+    height: 69vh;    
     margin-top: 30px; 
-    margin-left: 3.5vw;
+    margin-left: 1vw;
 }
 
 .caixaPersonagem{
@@ -61,4 +61,10 @@ label{
     font-family: 'Montaga', serif;
     font-size: 15px;
     margin-right: 15px;
+}
+
+h5{
+    font-family: 'Montaga', serif;
+    font-size: 15px;
+    color: whitesmoke;
 }

@@ -35,13 +35,13 @@ export class CriarpersonagensComponent implements OnInit {
    password = localStorage.getItem(this.username);
 
 
-  criar(nomePers, ataque, tipo, inteligencia, vida){
+  criar(nomePers, ataque, tipo, inteligencia, vida, erroPers){
   this.service.criarPersonagem(nomePers, ataque, tipo, inteligencia, vida,this.username, this.password).subscribe((x) => {
         if (x['code'] == 200 ){
           this.router.navigate(['/Personagens']);
           console.log(x);
         }else{
-          alert("erro");
+          erroPers.style.display="block";
         }
       }
       );

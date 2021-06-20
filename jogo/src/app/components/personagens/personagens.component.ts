@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicosService } from 'src/app/services/servicos.service';
+import { Personagem } from 'src/app/classes/personagem';
 
 @Component({
   selector: 'app-personagens',
@@ -10,35 +11,53 @@ import { ServicosService } from 'src/app/services/servicos.service';
 export class PersonagensComponent implements OnInit {
 
   constructor(private service: ServicosService, router:Router) { 
-    this.router = router;
+ 
   }
 
   ngOnInit(): void {
     this.receberPersonagem();
   }
 
-  router: Router;
-  
-  name;
-  idPersonagem;
-  ataque;
-  isMonster;
-  Inteligencia;
-  vida;
-  idPlayer;
+item:number=0;
 
-  receberPersonagem() {
-    this.service.receberPersonagem(this.service.id).subscribe((x) => {
-      if (x['code'] == 200) {
-        this.name = x['data'].Personagens[0].Nome;
-        this.idPersonagem = x['data'].Personagens[0].ID;
-        this.ataque = x['data'].Personagens[0].Atk;
-        this.isMonster = x['data'].Personagens[0].IsMonset;
-        this.Inteligencia = x['data'].Personagens[0].Int;
-        this.vida = x['data'].Personagens[0].Vida;
-        this.idPlayer = x['data'].Personagens[0].ID_Player;
-      } 
-    });
+  recivedata ?: any;
+  arrayPersonagens : Array<Personagem> =[];
+
+
+
+receberPersonagem() {
+  this.service.receberPersonagem(this.service.id).subscribe( 
+    (data) => {
+        this.recivedata = data;
+        console.log(this.recivedata['data'].Personagens);
+        if(this.recivedata['code'] == 200){
+          this.arrayPersonagens = this.recivedata['data'].Personagens.map(( x: any) => new Personagem(x) )
+        }else{
+          alert("Erro");
+        } 
+        console.log(this.arrayPersonagens[1].name);
+
+        for (let item of this.arrayPersonagens) {
+          console.log(item);
+        }
+  });
+}
+ 
+  indexPersonagem:number;
+ 
+
+  ataquezinho;
+  vidazinha;
+  inteligenciazinha;
+
+  mudarStats(event){
+    this.indexPersonagem = event.target.value;
+    console.log(this.indexPersonagem);
+    this.ataquezinho = this.arrayPersonagens[this.indexPersonagem].ataque;
+    this.vidazinha = this.arrayPersonagens[this.indexPersonagem].vida;
+    this.inteligenciazinha = this.arrayPersonagens[this.indexPersonagem].Inteligencia;
   }
 
 }
+
+

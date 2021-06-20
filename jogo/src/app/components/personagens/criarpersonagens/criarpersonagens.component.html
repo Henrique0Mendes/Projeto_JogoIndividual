@@ -1,31 +1,33 @@
 
 <div class="caixa row" >
     <div class="col-7">
+        <a   [routerLink]="['/Personagens']" ><img src="../../../../assets/imagens/voltar.png" class="voltar"></a>
+
         <h1>Criar personagem</h1>
+        <div class="margin-left">
+            <p #erroPers> Erro: Personagem não criada!</p>
 
-        <label class="letraInput ">Nome personagem</label>
-        <input type="text" class="form-control" #nomePers><br>
-
-        <label class="letraInput">Tipo de personagem</label>
-         <select class="form-select tipoPers" aria-label="Default select example"  #tipo (change)="mudaPersonagem(tipo)" >
-            <option value="false">Caçador</option>
-            <option value="true"> Monstro</option>
-        </select><br><br>
-
-        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label> 
-        <input type="range"  name="ataque" id="range_ataque"  #ataque id="rangue_ataque" min="1" max="30" oninput="range_ataque_disp.value = rangue_ataque.value">
-        <output  id="range_ataque_disp" class="valor"></output>
-        <br><br>     
-        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida</label>
-        <input type="range"   name="vida" id="range_vida"  min="1" max="30" #vida oninput="range_vida_disp.value = range_vida.value">
-        <output  id="range_vida_disp" class="valor"></output>
-        <br><br> 
-        <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia</label>
-        <input type="range"  name="inteligencia" id="range_inteligencia"  #inteligencia min="1" max="30" oninput="range_inteligencia_disp.value = range_inteligencia.value">
-        <output  id="range_inteligencia_disp" class="valor"></output>
-
-        <button (click)="criar(nomePers.value, ataque.value, tipo.value, inteligencia.value, vida.value)">Criar</button>
-
+            <label class="letraInput ">Nome personagem</label>
+            <input type="text" class="form-control" #nomePers><br>
+            <label class="letraInput">Tipo de personagem</label>
+            <select class="form-select tipoPers" aria-label="Default select example"  #tipo (change)="mudaPersonagem(tipo)" >
+                <option value="false">Caçador</option>
+                <option value="true"> Monstro</option>
+            </select><br><br>
+            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label> 
+            <input type="range"  name="ataque" id="range_ataque"  #ataque id="rangue_ataque" min="1" max="30" oninput="range_ataque_disp.value = rangue_ataque.value">
+            <output  id="range_ataque_disp" class="valor"></output>
+            <br><br>     
+            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida</label>
+            <input type="range"   name="vida" id="range_vida"  min="1" max="30" #vida oninput="range_vida_disp.value = range_vida.value">
+            <output  id="range_vida_disp" class="valor"></output>
+            <br><br> 
+            <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia</label>
+            <input type="range"  name="inteligencia" id="range_inteligencia"  #inteligencia min="1" max="30" oninput="range_inteligencia_disp.value = range_inteligencia.value">
+            <output  id="range_inteligencia_disp" class="valor"></output>
+            <button (click)="criar(nomePers.value, ataque.value, tipo.value, inteligencia.value, vida.value, erroPers)">Criar</button><br>
+        </div>
+     
 
     </div>
     <div class="col-5">
