@@ -18,6 +18,7 @@ export class PersonagensComponent implements OnInit {
   }
 
   router: Router;
+  
   name;
   idPersonagem;
   ataque;
@@ -26,13 +27,9 @@ export class PersonagensComponent implements OnInit {
   vida;
   idPlayer;
 
-   personagens: Array<any> = ['Apple', 2, 'Orange', 3, 4, 'Banana']; 
-
-
   receberPersonagem() {
     this.service.receberPersonagem(this.service.id).subscribe((x) => {
       if (x['code'] == 200) {
-
         this.name = x['data'].Personagens[0].Nome;
         this.idPersonagem = x['data'].Personagens[0].ID;
         this.ataque = x['data'].Personagens[0].Atk;

@@ -8,7 +8,7 @@
  }
 
  .arma{
-    width: 15vw;
+    width: 25vw;
     height: 45vh;    
     margin-top: 30px; 
     margin-left: 4vw;
@@ -30,7 +30,7 @@ h1{
     font-family: 'Montaga', serif;
 }
 
-.tipoPers{
+.tipoArma{
     margin-top: 20px;
     width: 60%;
     height: 37px;

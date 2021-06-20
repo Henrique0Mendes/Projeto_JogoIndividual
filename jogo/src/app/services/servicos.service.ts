@@ -12,15 +12,13 @@ export class ServicosService {
 
   linkLogin: string = "http://moreiramoises.pt/server/apis/login.php";
 
-  linkCriarRegisto = "http://moreiramoises.pt/server/apis/signup.php";
+  linkCriarRegisto:string = "http://moreiramoises.pt/server/apis/signup.php";
 
   LinkCriarPersonagem:string = "http://moreiramoises.pt/server/apis/createChart.php";
 
   linkReceberPersonagem: string = 'http://moreiramoises.pt/server/apis/get/getChar.php?PlayerID=';
-
-
+  
   id:number;
-
    
   login(nome:any, pass:any){
     let data: FormData = new FormData();

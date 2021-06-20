@@ -16,13 +16,17 @@ export class CriarArmaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  fotoPers:string="../../../assets/imagens/hunter.png";
+  foto:string="../../../assets/imagens/machado.png";
    
   mudaArma(tipo){
-      if (tipo.value == 1){
-        this.fotoPers="../../../assets/imagens/monster.png";
-      }else{
-        this.fotoPers="../../../assets/imagens/hunter.png";
+      if (tipo.value == 0){
+        this.foto="../../../../assets/imagens/machado.png";
+      } else if (tipo.value == 1){
+        this.foto="../../../../assets/imagens/cutelo.png";
+      }else if (tipo.value == 2){
+        this.foto="../../../assets/imagens/pistol.png";
+      }else if (tipo.value == 3){
+        this.foto="../../../assets/imagens/espada.png";
       }
   }
 
