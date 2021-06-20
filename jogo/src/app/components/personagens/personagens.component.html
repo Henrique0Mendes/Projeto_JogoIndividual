@@ -1,1 +1,34 @@
-<p>personagens works!</p>
+<div class="caixa row" >
+    <div class="col-7">
+        <h2>Escolhe a tua personagem</h2>
+        <select class="form-select" aria-label="Default select example" >
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+        <div>
+            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label> {{ataque}}
+            <h4></h4>    
+            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida</label>{{vida}}
+            <h4></h4>
+            <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia</label>{{Inteligencia}}
+            <h4></h4>
+        </div>
+        <h2>Escolhe a arma</h2>
+        <select class="form-select" aria-label="Default select example" >
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+        <button><a [routerLink]="['/CriarPersonagem']">Criar personagem</a></button><br>
+        <button><a [routerLink]="['/CriarArma']">Criar arma</a></button><br>
+        <button><a [routerLink]="['/Jogar']"> Jogar</a></button>
+    </div>
+    <div class="col-5">
+        <div class="caixaPersonagem">  
+            <img class="tipoPersonagem" src="../../../assets/imagens/monster.png">
+        </div>
+      
+    </div>
+</div>

@@ -2,27 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicosService } from 'src/app/services/servicos.service';
 
-
 @Component({
-  selector: 'app-criarpersonagens',
-  templateUrl: './criarpersonagens.component.html',
-  styleUrls: ['./criarpersonagens.component.css']
+  selector: 'app-criar-arma',
+  templateUrl: './criar-arma.component.html',
+  styleUrls: ['./criar-arma.component.css']
 })
-export class CriarpersonagensComponent implements OnInit {
+export class CriarArmaComponent implements OnInit {
 
   constructor(private service: ServicosService, router:Router) { 
-    this.router = router;
 
   }
 
   ngOnInit(): void {
-
   }
 
   fotoPers:string="../../../assets/imagens/hunter.png";
    
-  mudaPersonagem(tipo){
-      if (tipo.value == "true"){
+  mudaArma(tipo){
+      if (tipo.value == 1){
         this.fotoPers="../../../assets/imagens/monster.png";
       }else{
         this.fotoPers="../../../assets/imagens/hunter.png";
@@ -31,12 +28,14 @@ export class CriarpersonagensComponent implements OnInit {
 
   router: Router;
 
-   username = localStorage.key(0);
-   password = localStorage.getItem(this.username);
+  /* criarArma(nome:any, ataque:any,durabilidade:any, tipo:any, vida:any){
+   let username = localStorage.key(0);
+   let password = localStorage.getItem(username);
 
-
-  criar(nomePers, ataque, tipo, inteligencia, vida){
-  this.service.criarPersonagem(nomePers, ataque, tipo, inteligencia, vida,this.username, this.password).subscribe((x) => {
+    this.service.criarPersonagem(nome, ataque, tipo, durabilidade, vida, username, password).subscribe(
+      (x) => {console.log(x['data']);}
+      );
+      this.service.criarPersonagem(nome, ataque, tipo, durabilidade, vida,username, password).subscribe((x) => {
         if (x['code'] == 200 ){
           this.router.navigate(['/Personagens']);
           console.log(x);
@@ -46,5 +45,7 @@ export class CriarpersonagensComponent implements OnInit {
       }
       );
   } 
+
+ */
 
 }

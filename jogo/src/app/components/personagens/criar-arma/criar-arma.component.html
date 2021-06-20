@@ -1,0 +1,52 @@
+
+<div class="caixa row" >
+    <div class="col-7">
+        <h1>Criar arma</h1>
+
+        <label class="letraInput ">Nome arma</label>
+        <input type="text" class="form-control" #nome><br>
+
+        <label class="letraInput">Tipo de arma</label>
+         <select class="form-select tipoPers" aria-label="Default select example"  #tipo (change)="mudaArma(tipo)" >
+            <option value="0">Caçador</option>
+            <option value="1"> Monstro</option>
+        </select><br><br>
+
+        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label> 
+        <input type="range"  name="ataque" id="range_ataque"  #ataque id="rangue_ataque" min="0" max="30" oninput="range_ataque_disp.value = rangue_ataque.value">
+        <output  id="range_ataque_disp" class="valor"></output>
+        <br><br>     
+        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida</label>
+        <input type="range"   name="vida" id="range_vida"  min="0" max="30" #vida oninput="range_vida_disp.value = range_vida.value">
+        <output  id="range_vida_disp" class="valor"></output>
+        <br><br> 
+        <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade</label>
+        <input type="range"  name="durabilidade" id="range_durabilidade"  #durabilidade min="0" max="30" oninput="range_durabilidade_disp.value = range_durabilidade.value">
+        <output  id="range_durabilidade_disp" class="valor"></output>
+
+     <!--    <button (click)="criarArma(nome.value ,tipo.value, ataque.value, tipo.value, vida.value, durabilidade.value)">Criar</button>
+ -->
+
+    </div>
+    <div class="col-5">
+        <div class="caixaArma">  
+            <img class="arma" #pers src={{fotoPers}}>
+        </div>
+      
+    </div>
+</div>
+
+<script>
+    $(function()
+{
+$('.slider').on('input change', function(){
+          $(this).next($('.slider_label')).html(this.value);
+        });
+      $('.slider_label').each(function(){
+          var value = $(this).prev().attr('value');
+          $(this).html(value);
+        });  
+  
+  
+})
+</script>

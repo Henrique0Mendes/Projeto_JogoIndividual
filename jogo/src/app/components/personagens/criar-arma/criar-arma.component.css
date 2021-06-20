@@ -7,14 +7,14 @@
     border:solid 2.4px #6f7072;
  }
 
- .hunter{
+ .arma{
     width: 15vw;
     height: 45vh;    
     margin-top: 30px; 
     margin-left: 4vw;
 }
 
-.caixaHunter{
+.caixaArma{
     background-image: url('../../../../assets/imagens/fundo_personagem.png');
     background-repeat: no-repeat;
     background-size: cover;

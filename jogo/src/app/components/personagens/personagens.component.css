@@ -1,0 +1,64 @@
+h2{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    color: whitesmoke;
+    font-family: 'Montaga', serif;
+}
+
+button{
+    background-color: black;
+    border: black;
+    border-radius: 100% ;
+    width: 190px;
+    margin-left: 10px;
+    margin-top: 3vh;  
+}
+
+button:hover{
+    box-shadow: inset 0 0 1em rgb(128, 112, 23), 0 0 1em rgb(128, 112, 23);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Montaga', serif;
+}
+
+.caixa{
+    background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
+    margin-top: 26vh;
+    margin-left: 20vw;
+    width: 60vw;
+    height: 60vh;
+    border:solid 2.4px #6f7072;
+ }
+
+ .tipoPersonagem{
+    width: 17vw;
+    height: 55vh;    
+    margin-top: 30px; 
+    margin-left: 3.5vw;
+}
+
+.caixaPersonagem{
+    background-image: url('../../../assets/imagens/fundo_personagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 4px #342f2c;
+}
+
+
+.icones{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+label{
+    color: whitesmoke;
+    font-family: 'Montaga', serif;
+    font-size: 15px;
+    margin-right: 15px;
+}

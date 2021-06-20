@@ -13,7 +13,7 @@ import { ServicosService } from 'src/app/services/servicos.service';
 
 export class HomeComponent implements OnInit {
 
-  constructor(private service: ServicosService, router:Router,config: NgbModalConfig, private modalService: NgbModal ) {
+  constructor(private service: ServicosService, router:Router ,config: NgbModalConfig, private modalService: NgbModal ) {
     this.router = router;
     config.backdrop = 'static';
     config.keyboard = false;
@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  
   router: Router;
 
   login(user:any , pass:any, content, erro) {
@@ -38,8 +39,9 @@ export class HomeComponent implements OnInit {
       );
       this.service.login(user, pass).subscribe((x) => {
         if (x['code'] == 200 ){
-          this.router.navigate(['/Jogo'])
+          this.router.navigate(['/Personagens'])
           console.log(x);
+          this.service.id = x['data'];
           this.modalService.dismissAll(content);
         } else{
           erro.style.display="block";
@@ -54,7 +56,7 @@ export class HomeComponent implements OnInit {
         );
         this.service.criarUtilizador(user, pass).subscribe((x) => {
           if (x['code'] == 200 ){
-            this.router.navigate(['/Jogo'])
+            this.router.navigate(['/Personagens'])
             console.log(x);
             this.modalService.dismissAll(content1);
           }else{
