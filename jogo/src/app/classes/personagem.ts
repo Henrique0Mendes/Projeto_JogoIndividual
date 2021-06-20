@@ -3,7 +3,7 @@ export class Personagem {
     name;
     idPersonagem;
     ataque;
-    isMonster;
+    isMonset;
     Inteligencia;
     vida;
     idPlayer;
@@ -12,7 +12,7 @@ export class Personagem {
         this.name           = objectRecebido.Nome;
         this.idPersonagem   = objectRecebido.ID;
         this.ataque         = objectRecebido.Atk;
-        this.isMonster      = objectRecebido.isMonster;
+        this.isMonset      = objectRecebido.IsMonset;
         this.Inteligencia   = objectRecebido.Int;
         this.vida           = objectRecebido.Vida;
         this.idPlayer       = objectRecebido.ID_Player;

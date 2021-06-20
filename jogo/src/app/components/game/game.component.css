@@ -1,0 +1,23 @@
+
+.caixa{
+    background-image: url('../../../assets/imagens/fundo2.jpg');
+    width:100vw;
+    height:100vh;
+    border:solid 2.4px #6f7072;
+ }
+
+ .barra{
+    margin: 50px;
+}
+
+.hunter{
+    margin-top: 36vh;
+    width: 22vw;
+    height: 50vh;
+}
+
+.inimigo{
+    margin-top: 37vh;
+    width: 25vw;
+    height: 50vh;
+}

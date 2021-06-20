@@ -13,8 +13,7 @@ const routes: Routes = [
   {path:"Personagens",component:PersonagensComponent},
   {path:"CriarPersonagem",component:CriarpersonagensComponent},
   {path:"CriarArma",component:CriarArmaComponent},
-  {path:"Jogo",component:GameComponent},
-  
+  {path:"Jogar",component:GameComponent},
   {path:"notFound", component:QuatroZeroQuatroComponent},
   {path:"**",redirectTo: "notFound"},
 

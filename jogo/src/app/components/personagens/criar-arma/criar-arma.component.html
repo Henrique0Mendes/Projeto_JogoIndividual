@@ -26,8 +26,8 @@
             <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade</label>
             <input type="range"  name="durabilidade" id="range_durabilidade"  #durabilidade min="1" max="30" oninput="range_durabilidade_disp.value = range_durabilidade.value">
             <output  id="range_durabilidade_disp" class="valor"></output>
-            <button (click)="criarArma(nome.value ,tipo.value, ataque.value,  vida.value, durabilidade.value, erroArma)">Criar</button>
-        </div>
+            <button (click)="criarArma(nome.value, ataque.value, durabilidade.value, vida.value, erroArma)">Criar</button>
+       </div>
        
     </div>
     <div class="col-5">

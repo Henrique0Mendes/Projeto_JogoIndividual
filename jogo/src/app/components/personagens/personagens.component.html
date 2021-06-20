@@ -4,24 +4,21 @@
         <select class="form-select" aria-label="Default select example" (change)="mudarStats($event)" >
             <option *ngFor=" let item of arrayPersonagens; index as indexOfelement;" value="{{indexOfelement}}" > {{item.name}} </option>
         </select> 
-        <div>
-            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label><h5>{{ataquezinho}}</h5>
-            <h4></h4>    
-            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida</label><h5>{{vidazinha}}</h5>
-            <h4></h4>
-            <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia</label><h5>{{inteligenciazinha}}</h5>
-            <h4></h4>
-        </div>
-        <h2>Escolhe a arma</h2>
+        <h5 #idPersona style="display: none;">{{idPersonagem}}</h5>
+        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque {{ataquezinho}}</label>
+        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida {{vidazinha}}</label>
+        <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia {{inteligenciazinha}}</label>
+
         
-        <div>
-            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label> 
-            <h4></h4>    
-            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida</label>
-            <h4></h4>
-            <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade</label>
-            <h4></h4>
-        </div>
+     
+        <h2>Escolhe a arma</h2>
+        <select class="form-select" aria-label="Default select example" (change)="mudarArma($event)" >
+            <option *ngFor=" let item of arrayArmas; index as indexOfelement;" value="{{indexOfelement}}" > {{item.name}} </option>
+        </select> 
+        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque {{ataquezinhoArma}}</label>
+        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida {{ataquezinhoArma}}</label>
+        <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade {{durabilidadeArma}}</label><br>
+   
 
         <button><a [routerLink]="['/CriarPersonagem']">Criar personagem</a></button><br>
         <button><a [routerLink]="['/CriarArma']">Criar arma</a></button><br>
@@ -29,7 +26,7 @@
     </div>
     <div class="col-5">
         <div class="caixaPersonagem">  
-            <img class="tipoPersonagem" src="../../../assets/imagens/monster.png">
+            <img class="tipoPersonagem" src={{fotoTipoPers}}>
         </div>
       
     </div>

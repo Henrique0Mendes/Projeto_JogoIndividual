@@ -10,9 +10,9 @@
             <label class="letraInput ">Nome personagem</label>
             <input type="text" class="form-control" #nomePers><br>
             <label class="letraInput">Tipo de personagem</label>
-            <select class="form-select tipoPers" aria-label="Default select example"  #tipo (change)="mudaPersonagem(tipo)" >
+            <select class="form-select tipoPers" aria-label="Default select example"  #tipo  (change)="mudaPersonagem(tipo)" >
                 <option value="false">Caçador</option>
-                <option value="true"> Monstro</option>
+                <option value="1"> Monstro</option>
             </select><br><br>
             <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque</label> 
             <input type="range"  name="ataque" id="range_ataque"  #ataque id="rangue_ataque" min="1" max="30" oninput="range_ataque_disp.value = rangue_ataque.value">

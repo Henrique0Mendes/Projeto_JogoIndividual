@@ -19,13 +19,13 @@ export class CriarpersonagensComponent implements OnInit {
 
   }
 
-  fotoPers:string="../../../assets/imagens/hunter.png";
+  fotoPers:string="../../../../assets/imagens/hunter.png";
    
   mudaPersonagem(tipo){
-      if (tipo.value == "true"){
-        this.fotoPers="../../../assets/imagens/monster.png";
-      }else{
-        this.fotoPers="../../../assets/imagens/hunter.png";
+      if (tipo.value == 1){
+        this.fotoPers="../../../../assets/imagens/monster.png";
+      }else if (tipo.value="false"){
+        this.fotoPers=".../../../../assets/imagens/hunter.png";
       }
   }
 

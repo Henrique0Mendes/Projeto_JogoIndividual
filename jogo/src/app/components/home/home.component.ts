@@ -42,6 +42,7 @@ export class HomeComponent implements OnInit {
           this.router.navigate(['/Personagens'])
           console.log(x);
           this.service.id = x['data'];
+          localStorage.setItem("idPlayer",this.service.id);
           this.modalService.dismissAll(content);
         } else{
           erro.style.display="block";

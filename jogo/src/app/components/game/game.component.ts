@@ -11,5 +11,9 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
   }
+   
+  vidaPlayer1 :number = 90;
+  vidaPlayer2 :number = 10;
+
 
 }
