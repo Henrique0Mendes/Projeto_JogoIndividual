@@ -3,14 +3,14 @@ export class Arma {
     name;
     atk;
     durabilidade;
-    vida;
+    TipoDeArma;
     idPersonagem;
 
     constructor(objectRecebido: any){
-        this.name           =   objectRecebido.Nome;
+        this.name           =   objectRecebido.nome;
         this.atk            =   objectRecebido.Atk;
-        this.durabilidade   =   objectRecebido.durabilidade;
-        this.vida           =   objectRecebido.Vida;
-        this.idPersonagem   =   objectRecebido.ID_Player;
+        this.TipoDeArma     =   objectRecebido.TipoDeArma;
+        this.durabilidade   =   objectRecebido.Durabilidade;
+        this.idPersonagem   =   objectRecebido.IDPersonagem;
       }
 }

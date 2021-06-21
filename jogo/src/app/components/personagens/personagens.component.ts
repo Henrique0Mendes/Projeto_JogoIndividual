@@ -42,7 +42,6 @@ receberPersonagem() {
         }else{
           alert("Erro Personagem");
         } 
-   
         this.idPersonagem = this.arrayPersonagens[0].idPersonagem;
         this.ataquezinho = this.arrayPersonagens[0].ataque;
         this.vidazinha = this.arrayPersonagens[0].vida;
@@ -57,24 +56,27 @@ receberPersonagem() {
 
 recivedata2 ?: any;
 arrayArmas : Array<Arma> =[];
-indexPersonagemArma:number;
+indexArma:number;
 idPersonagemArma;
 ataquezinhoArma;
-vidazinhaArma;
+TipoDeArma;
 durabilidadeArma;
  
 receberArma() {
   this.service.receberArma(this.idPersonagem).subscribe( 
-    (data2) => {
-        this.recivedata2 = data2;
-        console.log(this.recivedata2['data']);
+    (data) => {
+        this.recivedata2 = data;
+        console.log(this.recivedata2['data'].Armas);
         if(this.recivedata2['code'] == 200){
-          this.arrayArmas = this.recivedata2['data'].map(( x: any) => new Arma(x) )
+          this.arrayArmas = this.recivedata2['data'].Armas.map(( x: any) => new Arma(x) )
+          document.getElementById("armas").style.display="block";
+          document.getElementById("naoTemArmas").style.display="none";
         }else{
-          alert("Erro Arma");
+          document.getElementById("armas").style.display="none";
+          document.getElementById("naoTemArmas").style.display="block";
         }
         this.ataquezinhoArma = this.arrayArmas[0].atk;
-        this.vidazinhaArma = this.arrayArmas[0].vida;
+        this.TipoDeArma = this.arrayArmas[0].TipoDeArma;
         this.durabilidadeArma = this.arrayArmas[0].durabilidade;
   });
 }
@@ -84,21 +86,21 @@ receberArma() {
     console.log(this.indexPersonagem);
     this.idPersonagem = this.arrayPersonagens[this.indexPersonagem].idPersonagem;
     this.ataquezinho = this.arrayPersonagens[this.indexPersonagem].ataque;
-    this.vidazinha = this.arrayPersonagens[this.indexPersonagem].vida;
     this.inteligenciazinha = this.arrayPersonagens[this.indexPersonagem].Inteligencia;
     this.tipoPersona = this.arrayPersonagens[this.indexPersonagem].isMonset;
     this.mudarFoto();
     localStorage.removeItem("idPersonagem");
     localStorage.setItem("idPersonagem",this.idPersonagem);
+    this.receberArma();
 
   }
 
   mudarArma(event){
-    this.indexPersonagemArma = event.target.value;
-    console.log(this.indexPersonagemArma);
-    this.ataquezinhoArma = this.arrayArmas[this.indexPersonagem].atk;
-    this.vidazinhaArma = this.arrayArmas[this.indexPersonagem].vida;
-    this.durabilidadeArma = this.arrayArmas[this.indexPersonagem].durabilidade;
+    this.indexArma = event.target.value;
+    console.log(this.indexArma);
+    this.ataquezinhoArma = this.arrayArmas[this.indexArma].atk;
+    this.TipoDeArma = this.arrayArmas[this.indexArma].TipoDeArma;
+    this.durabilidadeArma = this.arrayArmas[this.indexArma].durabilidade;
   }
 
   mudarFoto(){

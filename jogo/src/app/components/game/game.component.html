@@ -14,7 +14,8 @@
             </div>
             <h4 class="margenstopStats">Nome: {{nomePlayer1}}</h4>
         </div>
-        <img class="hunter" src='../../../assets/imagens/hunter.png'>
+        <p style="color: transparent;" id="danoP1" >- {{danoPlayer1}}</p>
+        <img class="hunter" src={{fotoPersonaEscolhida}}>
     </div>
    
     <div class="col-6"><button class="botao" (click)="lutar()">Lutar</button></div>
@@ -23,7 +24,7 @@
         <div class="margemDireitaStats">
             <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/heart.png"><h4 style="display: inline;">Vida: {{vidaPlayer2}}</h4></div>
             <div class="progress barra  justify-content-end">
-                <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer2}}%;display: inline;"> </div>
+                <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer2Inicial}}%;display: inline;"> </div>
             </div>
             <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/strength.png"><h4 style="display: inline;">Ataque: {{atkPlayer2}}</h4></div>
             <div class="progress barra justify-content-end">
@@ -36,7 +37,7 @@
             </div>
             <h4 class="d-flex flex-row-reverse margenstopStats">Nome: {{nomePlayer2}}</h4>
         </div>
-        
-        <img class="inimigo" src='../../../assets/imagens/HunterAleatorio1.png'>
+        <p style="color: transparent;" id="danoP2"  class="d-flex flex-row-reverse">- {{danoPlayer2}}</p>
+        <img class="inimigo" src={{foto}}>
     </div>
 </div>

@@ -9,16 +9,17 @@
         <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida {{vidazinha}}</label>
         <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia {{inteligenciazinha}}</label>
 
-        
-     
-        <h2>Escolhe a arma</h2>
-        <select class="form-select" aria-label="Default select example" (change)="mudarArma($event)" >
-            <option *ngFor=" let item of arrayArmas; index as indexOfelement;" value="{{indexOfelement}}" > {{item.name}} </option>
-        </select> 
-        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque {{ataquezinhoArma}}</label>
-        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida {{ataquezinhoArma}}</label>
-        <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade {{durabilidadeArma}}</label><br>
-   
+        <div id="armas">
+            <h2>Escolhe a arma</h2>
+            <select class="form-select" aria-label="Default select example" (change)="mudarArma($event)" >
+                <option *ngFor=" let item of arrayArmas; index as indexOfelements ;" value="{{indexOfelements}}" > {{item.name}} </option>
+            </select> 
+            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque {{ataquezinhoArma}}</label>
+            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Tipo arma {{TipoDeArma}}</label>
+            <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade {{durabilidadeArma}}</label><br>
+        </div>
+        <h2 id="naoTemArmas" >Personagem não tem armas!</h2>
+
 
         <button><a [routerLink]="['/CriarPersonagem']">Criar personagem</a></button><br>
         <button><a [routerLink]="['/CriarArma']">Criar arma</a></button><br>

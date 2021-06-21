@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   router: Router;
 
   login(user:any , pass:any, content, erro) {
+    
   this.service.login(user, pass).subscribe(
       (x) => {console.log(x['data']);}
       );
