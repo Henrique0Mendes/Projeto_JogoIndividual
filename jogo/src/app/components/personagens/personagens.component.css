@@ -1,3 +1,35 @@
+
+.caixa{
+    background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
+    margin-top: 17vh;
+    margin-left: 15vw;
+    width: 77vw;
+    height: 74vh;
+    border:solid 2.4px #6f7072;
+ }
+
+ .tipoPersonagem{
+    width: 27vw;
+    height: 69vh;    
+    margin-top: 30px; 
+    margin-left: 1vw;
+}
+
+.caixaPersonagem{
+    background-image: url('../../../assets/imagens/fundo_personagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 4px #342f2c;
+}
+
+.caixaHunter{
+    background-image: url('../../../assets/imagens/fundo_personagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 4px #342f2c;
+    margin-top: 1vh;
+}
+
 h2{
     margin-top: 30px;
     margin-left: 10px;
@@ -24,36 +56,6 @@ a{
     color: white;
     font-size: 16px;
     font-family: 'Montaga', serif;
-}
-
-.caixa{
-    background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
-    margin-top: 17vh;
-    margin-left: 15vw;
-    width: 77vw;
-    height: 74vh;
-    border:solid 2.4px #6f7072;
- }
-
- .tipoPersonagem{
-    width: 27vw;
-    height: 69vh;    
-    margin-top: 30px; 
-    margin-left: 1vw;
-}
-
-.caixaPersonagem{
-    background-image: url('../../../assets/imagens/fundo_personagem.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: solid 4px #342f2c;
-}
-
-
-.icones{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
 }
 
 label{

@@ -22,6 +22,9 @@ export class ServicosService {
     
     linkCriarArma: string = 'http://moreiramoises.pt/server/apis/createArma.php';
 
+    linkReceberPersonagemAleatoria: string = ' http://moreiramoises.pt/server/apis/get/getRandomChar.php?';
+
+
     id;
 
   login(nome, pass){
@@ -71,6 +74,11 @@ export class ServicosService {
     data.append("password", password); 
     data.append("idPersonagem", idPersonagem); 
     return this.http.post(this.linkCriarArma, data);
+  }
+
+  
+  receberPersonagemAleatoria() {
+    return this.http.get(this.linkReceberPersonagemAleatoria);
   }
 
 

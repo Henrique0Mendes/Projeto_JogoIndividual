@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
         );
         this.service.criarUtilizador(user, pass).subscribe((x) => {
           if (x['code'] == 200 ){
-            this.router.navigate(['/Personagens'])
+            this.router.navigate(['/Home'])
             console.log(x);
             this.modalService.dismissAll(content1);
           }else{

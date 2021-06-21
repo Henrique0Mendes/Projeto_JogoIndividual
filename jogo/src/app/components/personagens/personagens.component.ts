@@ -22,6 +22,7 @@ export class PersonagensComponent implements OnInit {
 
   recivedata ?: any;
   arrayPersonagens : Array<Personagem> =[];
+  StorePersonagem: Personagem;
   indexPersonagem:number;
   idPersonagem;
   ataquezinho;
@@ -89,6 +90,7 @@ receberArma() {
     this.mudarFoto();
     localStorage.removeItem("idPersonagem");
     localStorage.setItem("idPersonagem",this.idPersonagem);
+
   }
 
   mudarArma(event){

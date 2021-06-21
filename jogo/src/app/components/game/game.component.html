@@ -1,16 +1,42 @@
 <div class="caixa row" >
-    <div class="col-4">
-        <div class="progress barra">
-            <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer1}}%"></div>
+    <div class="col-3">
+        <div class="margemEsquerdaStats">
+            <div class="margenstopStats"><img class="icones" src="../../../../assets/imagens/heart.png"><h4 style="display: inline;">Vida:{{vidaPlayer1}}</h4></div><div class="progress barra">
+                <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer1}}%;display: inline;"> </div>
+            </div>
+    
+            <div class="margenstopStats"><img class="icones" src="../../../../assets/imagens/strength.png"><h4 style="display: inline;">Ataque:{{atkPlayer1}}</h4></div><div class="progress barra">
+                <div class="progress-bar bg-primary" role="progressbar" style="width:{{atkPlayer1}}%;display: inline;" > </div>
+            </div>
+            
+            <div class="margenstopStats"><img class="icones" src="../../../../assets/imagens/inteligencia.png"><h4 style="display: inline;">Inteligencia: {{intePlayer1}}</h4></div><div class="progress barra">
+                <div class="progress-bar bg-success" role="progressbar" style="width:{{intePlayer1}}%;display: inline;"> </div>
+            </div>
+            <h4 class="margenstopStats">Nome: {{nomePlayer1}}</h4>
         </div>
         <img class="hunter" src='../../../assets/imagens/hunter.png'>
     </div>
-    <div class="col-4"></div>
-    <div class="col-4">
-        <div class="progress barra justify-content-end">
-            <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer2}}%" ></div>
+   
+    <div class="col-6"><button class="botao" (click)="lutar()">Lutar</button></div>
+
+    <div class="col-3">
+        <div class="margemDireitaStats">
+            <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/heart.png"><h4 style="display: inline;">Vida: {{vidaPlayer2}}</h4></div>
+            <div class="progress barra  justify-content-end">
+                <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer2}}%;display: inline;"> </div>
+            </div>
+            <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/strength.png"><h4 style="display: inline;">Ataque: {{atkPlayer2}}</h4></div>
+            <div class="progress barra justify-content-end">
+                <div class="progress-bar bg-primary" role="progressbar" style="width:{{atkPlayer2}}%;display: inline;"></div>
+            </div>
+
+            <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/inteligencia.png"><h4 style="display: inline;">Inteligencia: {{intePlayer2}}</h4></div>
+            <div class="progress barra justify-content-end">
+                <div class="progress-bar bg-success" role="progressbar" style="width:{{intePlayer2}}%;display: inline;"> </div>
+            </div>
+            <h4 class="d-flex flex-row-reverse margenstopStats">Nome: {{nomePlayer2}}</h4>
         </div>
+        
         <img class="inimigo" src='../../../assets/imagens/HunterAleatorio1.png'>
     </div>
-
 </div>

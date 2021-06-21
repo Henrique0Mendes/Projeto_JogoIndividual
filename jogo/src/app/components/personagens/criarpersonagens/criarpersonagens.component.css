@@ -1,17 +1,25 @@
+
 .caixa{
     background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
-    margin-top: 26vh;
-    margin-left: 20vw;
-    width: 60vw;
-    height: 58vh;
+    margin-top: 17vh;
+    margin-left: 15vw;
+    width: 77vw;
+    height: 74vh;
     border:solid 2.4px #6f7072;
  }
 
  .hunter{
-    width: 21vw;
-    height: 52vh;    
+    width: 27vw;
+    height: 69vh;    
     margin-top: 30px; 
-    margin-left: 1.5vw;
+    margin-left: 1vw;
+}
+
+.caixaPersonagem{
+    background-image: url('../../../../assets/imagens/fundo_personagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 4px #342f2c;
 }
 
 .caixaHunter{

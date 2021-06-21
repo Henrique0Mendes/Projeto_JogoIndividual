@@ -6,18 +6,51 @@
     border:solid 2.4px #6f7072;
  }
 
- .barra{
-    margin: 50px;
-}
-
 .hunter{
-    margin-top: 36vh;
+    margin-top: 18vh;
     width: 22vw;
     height: 50vh;
 }
 
 .inimigo{
-    margin-top: 37vh;
+    margin-top: 17vh;
     width: 25vw;
     height: 50vh;
+}
+
+h4{
+    color: whitesmoke;
+    font-family: 'Montaga', serif;
+    font-size: 20px;
+}
+
+.margemDireitaStats{
+    margin-right: 20px;
+}
+
+.margenstopStats{
+    margin-top: 30px;
+}
+
+.margemEsquerdaStats{
+    margin-left: 20px;
+
+}
+
+
+.botao{
+    display: block;
+    margin-top: 90vh;
+    background-color: black;
+    border: black;
+    border-radius: 100% ;
+    width: 230px;
+    margin-left: 19vw;
+    color: whitesmoke;
+    font-family: 'Montaga', serif;
+    font-size: 20px;
+}
+
+.botao:hover{
+    box-shadow: inset 0 0 1em rgb(128, 112, 23), 0 0 1em rgb(128, 112, 23);
 }
