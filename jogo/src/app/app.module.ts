@@ -11,6 +11,7 @@ import { QuatroZeroQuatroComponent } from './components/quatro-zero-quatro/quatr
 import { PersonagensComponent } from './components/personagens/personagens.component';
 import { CriarpersonagensComponent } from './components/personagens/criarpersonagens/criarpersonagens.component';
 import { CriarArmaComponent } from './components/personagens/criar-arma/criar-arma.component';
+import { AventuraComponent } from './components/aventura/aventura.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CriarArmaComponent } from './components/personagens/criar-arma/criar-ar
     QuatroZeroQuatroComponent,
     PersonagensComponent,
     CriarpersonagensComponent,
-    CriarArmaComponent
+    CriarArmaComponent,
+    AventuraComponent
 
   ],
   imports: [

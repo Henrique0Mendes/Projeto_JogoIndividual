@@ -14,17 +14,29 @@
             </div>
             <h4 class="margenstopStats">Nome: {{nomePlayer1}}</h4>
         </div>
-        <p style="color: transparent;" id="danoP1" >- {{danoPlayer1}}</p>
+        <p></p>
         <img class="hunter" src={{fotoPersonaEscolhida}}>
     </div>
    
-    <div class="col-6"><button class="botao" (click)="lutar()">Lutar</button></div>
+    <div class="col-6">
+        <h3>{{info1}}</h3>
+        <h3>{{info2}}</h3>
+        <p id="win" class="centrarP" style="display: none;">{{winPlayer}} WIN</p>
+
+        <button style="display: none;" id="atacar" class="botao botaobaixo"  (click)="atacar()">Atacar</button>
+        <button style="display: none;" id="esquiva" class="botao" (click)="esquivar()">Esquivar</button>
+        <button style="display: none;" id="saco" class="botao" (click)="regenerar()">Saco de Sangue</button>
+
+        <button class="botao botaobaixo" (click)="comecarjogo()">Jogar</button>
+        <button class="botao" [routerLink]="['/Personagens']">Sair</button>
+
+    </div>
 
     <div class="col-3">
         <div class="margemDireitaStats">
             <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/heart.png"><h4 style="display: inline;">Vida: {{vidaPlayer2}}</h4></div>
             <div class="progress barra  justify-content-end">
-                <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer2Inicial}}%;display: inline;"> </div>
+                <div class="progress-bar bg-danger " role="progressbar" style="width:{{vidaPlayer2}}%;display: inline;"> </div>
             </div>
             <div class="d-flex flex-row-reverse margenstopStats"><img class="icones2" src="../../../../assets/imagens/strength.png"><h4 style="display: inline;">Ataque: {{atkPlayer2}}</h4></div>
             <div class="progress barra justify-content-end">
@@ -35,9 +47,11 @@
             <div class="progress barra justify-content-end">
                 <div class="progress-bar bg-success" role="progressbar" style="width:{{intePlayer2}}%;display: inline;"> </div>
             </div>
+            <p></p>
             <h4 class="d-flex flex-row-reverse margenstopStats">Nome: {{nomePlayer2}}</h4>
         </div>
-        <p style="color: transparent;" id="danoP2"  class="d-flex flex-row-reverse">- {{danoPlayer2}}</p>
+
         <img class="inimigo" src={{foto}}>
     </div>
+
 </div>

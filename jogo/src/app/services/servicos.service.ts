@@ -24,15 +24,19 @@ export class ServicosService {
 
     linkReceberPersonagemAleatoria: string = ' http://moreiramoises.pt/server/apis/get/getRandomChar.php?';
 
+    linkUpdate: string = ' http://moreiramoises.pt/server/apis/updateChart.php';
 
     id;
+    user;
+    pass;
 
   login(nome, pass){
     let data: FormData = new FormData();
     data.append("username", nome);
     data.append("password", pass);
     localStorage.clear();
-    localStorage.setItem(nome,pass);
+    localStorage.setItem("nome",nome);
+    localStorage.setItem("pass",pass);
     return this.http.post(this.linkLogin, data);
   }
 
@@ -63,23 +67,39 @@ export class ServicosService {
     return this.http.get(this.linkReceberArma + id);
   }
 
-  criarArma(nome, ataque, durabilidade, vida, username, password, idPersonagem){
+  
+  criarArma(nome, ataque, tipo, durabilidade, username, password, idPersonagem){
     let data:FormData = new FormData();
     data.append("name", nome);
     data.append("atk", ataque);
     data.append("durabilidade", durabilidade);
-    data.append("tipoDeArma", "machado");
-    data.append("vida", vida);
+    data.append("tipoDeArma", tipo);
+    data.append("vida", null);
     data.append("username", username);
     data.append("password", password); 
     data.append("idPersonagem", idPersonagem); 
     return this.http.post(this.linkCriarArma, data);
   }
 
-  
   receberPersonagemAleatoria() {
     return this.http.get(this.linkReceberPersonagemAleatoria);
   }
+  
+
+   upgrade(idPersonagem, nome, ataque, isMonster,  inteligencia, vida, utilizador, pass){
+    console.log(idPersonagem, nome, ataque, isMonster, inteligencia, vida, utilizador,pass);
+
+    let data: FormData = new FormData();
+    data.append("idChar", idPersonagem);
+    data.append("name", nome);
+    data.append("atk", ataque);
+    data.append("isMonster", "true");
+    data.append("int", inteligencia);
+    data.append("vida", vida);
+    data.append("username",utilizador );
+    data.append("password",pass );
+    return this.http.post(this.linkUpdate,data);
+  } 
 
 
 }

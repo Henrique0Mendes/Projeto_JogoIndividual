@@ -1,10 +1,10 @@
 
 .caixa{
     background-image: linear-gradient(to right, #394249,#2c3134,#272a2f,#28292d, #252527, #252429, #1a1519);
-    margin-top: 17vh;
+    margin-top: 8vh;
     margin-left: 15vw;
     width: 77vw;
-    height: 74vh;
+    height: 82vh;
     border:solid 2.4px #6f7072;
  }
 
@@ -38,24 +38,25 @@ h2{
     font-family: 'Montaga', serif;
 }
 
-button{
+.botao{
     background-color: black;
     border: black;
+    color: white;
+    font-size: 16px;
+    font-family: 'Montaga', serif;
     border-radius: 100% ;
     width: 190px;
     margin-left: 10px;
     margin-top: 3vh;  
 }
 
-button:hover{
+.botao:hover{
     box-shadow: inset 0 0 1em rgb(128, 112, 23), 0 0 1em rgb(128, 112, 23);
 }
 
 a{
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    font-family: 'Montaga', serif;
 }
 
 label{
@@ -69,4 +70,44 @@ h5{
     font-family: 'Montaga', serif;
     font-size: 15px;
     color: whitesmoke;
+}
+
+.botaoUpgrade{
+    background-image: url("../../../assets/imagens/fundo_modal.png");
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Montaga', serif;
+    width: 140px;
+    margin-left: 10px;
+    margin-top: 3vh;  
+    display: block;
+}
+
+.backModal{
+    /* background-image: linear-gradient(to right, #1e272e,#1a2125,#1a1d24,#222329, #1b1b22, #121018, #1a1519); */
+    background-image: url('../../../assets/imagens/fundo_modal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pontos{
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+#boneca{
+    width: 25vh;
+    height: 25vh;
+}
+
+.tituloModal{
+    color: whitesmoke;
+}
+
+.botaoFechar{
+    background: transparent;
+    border:none;
+    color: white;
+    font-size: 28px;
 }

@@ -4,26 +4,38 @@
         <select class="form-select" aria-label="Default select example" (change)="mudarStats($event)" >
             <option *ngFor=" let item of arrayPersonagens; index as indexOfelement;" value="{{indexOfelement}}" > {{item.name}} </option>
         </select> 
-        <h5 #idPersona style="display: none;">{{idPersonagem}}</h5>
-        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque {{ataquezinho}}</label>
-        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida {{vidazinha}}</label>
-        <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia {{inteligenciazinha}}</label>
+        <h5 #idPersona style="display: none;">{{idPersonagem}}</h5><br>
+        <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque: {{ataquezinho}}</label><br><br>
+        <img class="icones" src="../../../../assets/imagens/heart.png"><label>Vida: {{vidazinha}}</label><br><br>
+        <img class="icones" src="../../../../assets/imagens/inteligencia.png"><label>Inteligencia: {{inteligenciazinha}}</label>
 
         <div id="armas">
             <h2>Escolhe a arma</h2>
             <select class="form-select" aria-label="Default select example" (change)="mudarArma($event)" >
                 <option *ngFor=" let item of arrayArmas; index as indexOfelements ;" value="{{indexOfelements}}" > {{item.name}} </option>
-            </select> 
-            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque {{ataquezinhoArma}}</label>
-            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Tipo arma {{TipoDeArma}}</label>
-            <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade {{durabilidadeArma}}</label><br>
+            </select><br>
+            <img class="icones" src="../../../../assets/imagens/strength.png"><label>Ataque: {{ataquezinhoArma}}</label><br><br>
+            <img class="icones" src="../../../../assets/imagens/heart.png"><label>Tipo arma: {{TipoDeArma}}</label><br><br>
+            <img class="icones" src="../../../../assets/imagens/durabilidade.png"><label>Durabilidade: {{durabilidadeArma}}</label><br>
         </div>
-        <h2 id="naoTemArmas" >Personagem não tem armas!</h2>
+        <h2 id="naoTemArmas">Personagem não tem armas!</h2><br>
 
-
-        <button><a [routerLink]="['/CriarPersonagem']">Criar personagem</a></button><br>
-        <button><a [routerLink]="['/CriarArma']">Criar arma</a></button><br>
-        <button><a [routerLink]="['/Jogar']"> Jogar</a></button>
+        <div class="row">
+            <div class="col-6">
+                <button  class="botao"> <a [routerLink]="['/CriarPersonagem']">Criar personagem</a></button><br>
+            </div>
+            <div class="col-6">
+                <button  class="botao"><a [routerLink]="['/Jogar']">PVP</a></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button class="botao"><a [routerLink]="['/CriarArma']">Criar arma</a></button><br>
+            </div>
+            <div class="col-6">
+                <button  class="botao " (click)="openTreinar(content2)">Treinar</button><br>
+            </div>
+        </div>
     </div>
     <div class="col-5">
         <div class="caixaPersonagem">  
@@ -32,3 +44,28 @@
       
     </div>
 </div>
+
+
+<ng-template #content2 let-c="close" let-d="dismiss">
+    <div class="modal-header tituloModal backModal ">
+      <h4 class="modal-title letraLogin" id="modal-basic-title">Canalizar ecos de sangue</h4>
+      <button type="button" class="close botaoFechar" aria-label="Close " (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body  backModal">
+        <div class="row">
+            <div class="col-6">
+                <h4 class="pontos">Pontos disponiveis: {{pontos}}</h4>
+                <button type="submit" #ataque class="botaoUpgrade " (click)="treinar(1,content2, erro)"><img class="icones" src="../../../../assets/imagens/strength.png"> Ataque</button>
+                <button type="submit" #vida class="botaoUpgrade "   (click)="treinar(2,content2, erro)"> <img class="icones" src="../../../../assets/imagens/heart.png"> Vida</button>
+                <button type="submit" #intl class="botaoUpgrade "   (click)="treinar(3, content2, erro)"> <img class="icones" src="../../../../assets/imagens/inteligencia.png"> Inteligencia</button>
+                <p #erroCriar style="display: none;"> Erro: Personagem não evoluiu!</p>
+            </div>
+            <div class="col-6">
+                <img id="boneca" src="../../../assets/imagens/boneca.jpg">
+            </div>
+        </div>
+    </div>
+  </ng-template> 
+

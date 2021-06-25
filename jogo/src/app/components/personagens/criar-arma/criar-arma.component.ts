@@ -28,19 +28,21 @@ export class CriarArmaComponent implements OnInit {
 
 
   mudaArma(tipo){
-      if (tipo.value == 0){
+      if (tipo.value == "machado"){
         this.foto="../../../../assets/imagens/machado.png";
-      } else if (tipo.value == 1){
+      } else if (tipo.value == "cutelo"){
         this.foto="../../../../assets/imagens/cutelo.png";
-      }else if (tipo.value == 2){
+      }else if (tipo.value == "pistola"){
         this.foto="../../../assets/imagens/pistol.png";
-      }else if (tipo.value == 3){
+      }else if (tipo.value == "espada"){
         this.foto="../../../assets/imagens/espada.png";
+      }else if (tipo.value == "chinelo"){
+        this.foto="../../../assets/imagens/chinelo.png";
       }
   }
 
-  criarArma(nome, ataque,  durabilidade, vida, erroArma){
-    this.service.criarArma(nome, ataque, durabilidade, vida, this.username, this.password, this.idPersonagem).subscribe((x) => {
+  criarArma(nome, ataque, tipo,  durabilidade, erroArma){
+    this.service.criarArma(nome, ataque, tipo, durabilidade, this.username, this.password, this.idPersonagem).subscribe((x) => {
           if (x['code'] == 200 ){
             this.router.navigate(['/Personagens']);
             console.log(x);

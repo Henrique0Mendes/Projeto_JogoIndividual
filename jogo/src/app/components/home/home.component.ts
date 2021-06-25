@@ -34,16 +34,14 @@ export class HomeComponent implements OnInit {
   router: Router;
 
   login(user:any , pass:any, content, erro) {
-    
-  this.service.login(user, pass).subscribe(
-      (x) => {console.log(x['data']);}
-      );
       this.service.login(user, pass).subscribe((x) => {
         if (x['code'] == 200 ){
           this.router.navigate(['/Personagens'])
           console.log(x);
           this.service.id = x['data'];
           localStorage.setItem("idPlayer",this.service.id);
+          this.service.user = user;
+          this.service.pass =pass;
           this.modalService.dismissAll(content);
         } else{
           erro.style.display="block";
@@ -53,9 +51,6 @@ export class HomeComponent implements OnInit {
   }
 
   criarUtilizador(user:any , pass:any, content1, erroCriar) {
-    this.service.criarUtilizador(user, pass).subscribe(
-        (x) => {console.log(x['data']);}
-        );
         this.service.criarUtilizador(user, pass).subscribe((x) => {
           if (x['code'] == 200 ){
             this.router.navigate(['/Home'])
