@@ -31,8 +31,8 @@ export class CriarpersonagensComponent implements OnInit {
 
   router: Router;
 
-   username = localStorage.key(0);
-   password = localStorage.getItem(this.username);
+   username = localStorage.getItem("nome")
+   password = localStorage.getItem("pass");
 
 
   criar(nomePers, ataque, tipo, inteligencia, vida, erroPers){

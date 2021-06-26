@@ -21,6 +21,11 @@ export class PersonagensComponent implements OnInit {
   router: Router;
   ngOnInit(): void {
     this.receberPersonagem();
+    if(localStorage.getItem("pontos")===null){
+      this.pontos = 0;
+    }else{
+      this.pontos = localStorage.getItem("pontos");
+    }
   }
 
   fotoTipoPers:string;
@@ -155,7 +160,8 @@ receberArma() {
     }
   }
   ismonst:string;
-  pontos = localStorage.getItem("pontos");
+
+  pontos;
 
   treinar(valor, content2, erro){
 
